@@ -1,14 +1,301 @@
-<!DOCTYPE html>
-<html>
+﻿<!DOCTYPE html>
+<html lang="tr">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S�per Ma�aza - E-ticaret Deneme Sitesi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Genel Stil */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f4f4;
+            color: #333;
+        }
 
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header - Navigasyon */
+        .header {
+            background-color: #fff;
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo a {
+            font-size: 28px;
+            font-weight: 700;
+            color: #007bff; /* Mavi renk */
+            text-decoration: none;
+        }
+
+        .nav-links {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+            .nav-links li {
+                margin-left: 25px;
+            }
+
+            .nav-links a {
+                text-decoration: none;
+                color: #555;
+                font-weight: 400;
+                transition: color 0.3s ease;
+            }
+
+                .nav-links a:hover {
+                    color: #007bff;
+                }
+
+        /* Hero Alan� */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://via.placeholder.com/1500x500/007bff/ffffff?text=Yeni+Sezon+�r�nleri') no-repeat center center/cover;
+            color: #fff;
+            text-align: center;
+            padding: 100px 20px;
+            margin-bottom: 40px;
+        }
+
+            .hero h1 {
+                font-size: 48px;
+                margin-bottom: 20px;
+                text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+            }
+
+            .hero p {
+                font-size: 20px;
+                margin-bottom: 30px;
+                max-width: 800px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+        .btn {
+            display: inline-block;
+            background-color: #fff;
+            color: #007bff;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 700;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+            .btn:hover {
+                background-color: #e2e6ea;
+                color: #0056b3;
+            }
+
+        /* �r�nler B�l�m� */
+        .products-section {
+            padding: 40px 0;
+            text-align: center;
+        }
+
+            .products-section h2 {
+                font-size: 36px;
+                margin-bottom: 40px;
+                color: #333;
+            }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+            text-align: left;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+            .product-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+            }
+
+            .product-card img {
+                width: 100%;
+                height: 250px;
+                object-fit: cover;
+                display: block;
+            }
+
+        .product-info {
+            padding: 20px;
+        }
+
+            .product-info h3 {
+                font-size: 22px;
+                margin-top: 0;
+                margin-bottom: 10px;
+                color: #007bff;
+            }
+
+            .product-info p {
+                font-size: 16px;
+                color: #666;
+                line-height: 1.5;
+                margin-bottom: 15px;
+            }
+
+        .product-price {
+            font-size: 24px;
+            font-weight: 700;
+            color: #28a745; /* Ye�il renk */
+            margin-bottom: 15px;
+        }
+
+        .add-to-cart-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 700;
+            transition: background-color 0.3s ease;
+        }
+
+            .add-to-cart-btn:hover {
+                background-color: #0056b3;
+            }
+
+        /* Footer */
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 40px 0;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+            .footer p {
+                margin: 0;
+                font-size: 16px;
+            }
+
+            .footer .social-links a {
+                color: #fff;
+                font-size: 24px;
+                margin: 0 10px;
+                text-decoration: none;
+                transition: color 0.3s ease;
+            }
+
+                .footer .social-links a:hover {
+                    color: #007bff;
+                }
+    </style>
 </head>
 <body>
-    <h1>Hello World!</h1>
+
+    <header class="header">
+        <div class="navbar container">
+            <div class="logo">
+                <a href="#">S�per Ma�aza</a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#">Ana Sayfa</a></li>
+                    <li><a href="#">�r�nler</a></li>
+                    <li><a href="#">Hakk�m�zda</a></li>
+                    <li><a href="#">�leti�im</a></li>
+                    <li><a href="#">Sepet (0)</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Yeni Sezon �r�nlerinde B�y�k �ndirimler!</h1>
+                <p>Modan�n en trend par�alar�, kalitenin ve ��kl���n adresi S�per Ma�aza'da sizi bekliyor.</p>
+                <a href="#" class="btn">�imdi Ke�fet</a>
+            </div>
+        </section>
+
+        <section class="products-section">
+            <div class="container">
+                <h2>�ne ��kan �r�nlerimiz</h2>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <img src="https://via.placeholder.com/300x250/FF6347/FFFFFF?text=Trend+Ti��rt" alt="Trend Ti��rt">
+                        <div class="product-info">
+                            <h3>Trend Ti��rt</h3>
+                            <p>Yazl�k, pamuklu ve rahat kesim ti��rt. Her kombine uyum sa�lar.</p>
+                            <div class="product-price">129.90 TL</div>
+                            <a href="#" class="add-to-cart-btn">Sepete Ekle</a>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://via.placeholder.com/300x250/4682B4/FFFFFF?text=��k+Kot+Pantolon" alt="��k Kot Pantolon">
+                        <div class="product-info">
+                            <h3>��k Kot Pantolon</h3>
+                            <p>Slim fit, esnek kuma�l� modern kot pantolon. G�nl�k kullan�m i�in ideal.</p>
+                            <div class="product-price">249.50 TL</div>
+                            <a href="#" class="add-to-cart-btn">Sepete Ekle</a>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://via.placeholder.com/300x250/32CD32/FFFFFF?text=Spor+Ayakkab�" alt="Spor Ayakkab�">
+                        <div class="product-info">
+                            <h3>Konforlu Spor Ayakkab�</h3>
+                            <p>Hafif ve nefes alabilen yap�s�yla spor aktiviteleriniz i�in birebir.</p>
+                            <div class="product-price">399.00 TL</div>
+                            <a href="#" class="add-to-cart-btn">Sepete Ekle</a>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://via.placeholder.com/300x250/BA55D3/FFFFFF?text=Desenli+Elbise" alt="Desenli Elbise">
+                        <div class="product-info">
+                            <h3>Yazl�k Desenli Elbise</h3>
+                            <p>��k ve rahat kesimiyle yaz aylar�n�n vazge�ilmezi.</p>
+                            <div class="product-price">199.90 TL</div>
+                            <a href="#" class="add-to-cart-btn">Sepete Ekle</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 S�per Ma�aza. T�m haklar� sakl�d�r.</p>
+            <div class="social-links">
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+            </div>
+        </div>
+    </footer>
 
 </body>
-
 </html>
