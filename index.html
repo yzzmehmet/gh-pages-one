@@ -1,14 +1,14 @@
 ﻿<!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>S�per Ma�aza - E-ticaret Deneme Sitesi</title>
+    <title>The Ultimate Shop - E-commerce Demo Site</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
-        /* Genel Stil */
+        /* General Style */
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
@@ -24,7 +24,7 @@
             padding: 20px;
         }
 
-        /* Header - Navigasyon */
+        /* Header - Navigation */
         .header {
             background-color: #fff;
             padding: 15px 0;
@@ -40,7 +40,7 @@
         .logo a {
             font-size: 28px;
             font-weight: 700;
-            color: #007bff; /* Mavi renk */
+            color: #007bff;
             text-decoration: none;
         }
 
@@ -66,9 +66,10 @@
                     color: #007bff;
                 }
 
-        /* Hero Alan� */
+        /* Hero Section */
+        /* Placeholder image from Unsplash via Picsum */
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://via.placeholder.com/1500x500/007bff/ffffff?text=Yeni+Sezon+�r�nleri') no-repeat center center/cover;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://picsum.photos/seed/shopbanner/1500/500') no-repeat center center/cover;
             color: #fff;
             text-align: center;
             padding: 100px 20px;
@@ -105,7 +106,7 @@
                 color: #0056b3;
             }
 
-        /* �r�nler B�l�m� */
+        /* Products Section */
         .products-section {
             padding: 40px 0;
             text-align: center;
@@ -165,7 +166,7 @@
         .product-price {
             font-size: 24px;
             font-weight: 700;
-            color: #28a745; /* Ye�il renk */
+            color: #28a745;
             margin-bottom: 15px;
         }
 
@@ -218,15 +219,15 @@
     <header class="header">
         <div class="navbar container">
             <div class="logo">
-                <a href="#">S�per Ma�aza</a>
+                <a href="#">The Ultimate Shop</a>
             </div>
             <nav>
                 <ul class="nav-links">
-                    <li><a href="#">Ana Sayfa</a></li>
-                    <li><a href="#">�r�nler</a></li>
-                    <li><a href="#">Hakk�m�zda</a></li>
-                    <li><a href="#">�leti�im</a></li>
-                    <li><a href="#">Sepet (0)</a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Cart (0)</a></li>
                 </ul>
             </nav>
         </div>
@@ -235,50 +236,54 @@
     <main>
         <section class="hero">
             <div class="container">
-                <h1>Yeni Sezon �r�nlerinde B�y�k �ndirimler!</h1>
-                <p>Modan�n en trend par�alar�, kalitenin ve ��kl���n adresi S�per Ma�aza'da sizi bekliyor.</p>
-                <a href="#" class="btn">�imdi Ke�fet</a>
+                <h1>Big Discounts on New Season Arrivals!</h1>
+                <p>The latest fashion trends, quality and style await you at The Ultimate Shop.</p>
+                <a href="#" class="btn">Discover Now</a>
             </div>
         </section>
 
         <section class="products-section">
             <div class="container">
-                <h2>�ne ��kan �r�nlerimiz</h2>
+                <h2>Featured Products</h2>
                 <div class="product-grid">
+
                     <div class="product-card">
-                        <img src="https://via.placeholder.com/300x250/FF6347/FFFFFF?text=Trend+Ti��rt" alt="Trend Ti��rt">
+                        <img src="https://picsum.photos/seed/tshirt/300/250" alt="Trend T-Shirt">
                         <div class="product-info">
-                            <h3>Trend Ti��rt</h3>
-                            <p>Yazl�k, pamuklu ve rahat kesim ti��rt. Her kombine uyum sa�lar.</p>
-                            <div class="product-price">129.90 TL</div>
-                            <a href="#" class="add-to-cart-btn">Sepete Ekle</a>
+                            <h3>Trendy T-Shirt</h3>
+                            <p>Summer, cotton, and comfortable fit t-shirt. Fits every outfit.</p>
+                            <div class="product-price">$19.90</div>
+                            <a href="#" class="add-to-cart-btn">Add to Cart</a>
                         </div>
                     </div>
+
                     <div class="product-card">
-                        <img src="https://via.placeholder.com/300x250/4682B4/FFFFFF?text=��k+Kot+Pantolon" alt="��k Kot Pantolon">
+                        <img src="https://picsum.photos/seed/jeans/300/250" alt="Stylish Denim Jeans">
                         <div class="product-info">
-                            <h3>��k Kot Pantolon</h3>
-                            <p>Slim fit, esnek kuma�l� modern kot pantolon. G�nl�k kullan�m i�in ideal.</p>
-                            <div class="product-price">249.50 TL</div>
-                            <a href="#" class="add-to-cart-btn">Sepete Ekle</a>
+                            <h3>Stylish Denim Jeans</h3>
+                            <p>Slim fit, flexible fabric modern jeans. Ideal for daily use.</p>
+                            <div class="product-price">$39.50</div>
+                            <a href="#" class="add-to-cart-btn">Add to Cart</a>
                         </div>
                     </div>
+
                     <div class="product-card">
-                        <img src="https://via.placeholder.com/300x250/32CD32/FFFFFF?text=Spor+Ayakkab�" alt="Spor Ayakkab�">
+                        <img src="https://picsum.photos/seed/sneaker/300/250" alt="Comfortable Sneakers">
                         <div class="product-info">
-                            <h3>Konforlu Spor Ayakkab�</h3>
-                            <p>Hafif ve nefes alabilen yap�s�yla spor aktiviteleriniz i�in birebir.</p>
-                            <div class="product-price">399.00 TL</div>
-                            <a href="#" class="add-to-cart-btn">Sepete Ekle</a>
+                            <h3>Comfortable Sneakers</h3>
+                            <p>Lightweight and breathable design, perfect for your sports activities.</p>
+                            <div class="product-price">$59.00</div>
+                            <a href="#" class="add-to-cart-btn">Add to Cart</a>
                         </div>
                     </div>
+
                     <div class="product-card">
-                        <img src="https://via.placeholder.com/300x250/BA55D3/FFFFFF?text=Desenli+Elbise" alt="Desenli Elbise">
+                        <img src="https://picsum.photos/seed/dress/300/250" alt="Patterned Summer Dress">
                         <div class="product-info">
-                            <h3>Yazl�k Desenli Elbise</h3>
-                            <p>��k ve rahat kesimiyle yaz aylar�n�n vazge�ilmezi.</p>
-                            <div class="product-price">199.90 TL</div>
-                            <a href="#" class="add-to-cart-btn">Sepete Ekle</a>
+                            <h3>Patterned Summer Dress</h3>
+                            <p>Chic and comfortable cut, a must-have for the summer months.</p>
+                            <div class="product-price">$29.90</div>
+                            <a href="#" class="add-to-cart-btn">Add to Cart</a>
                         </div>
                     </div>
                 </div>
@@ -288,7 +293,7 @@
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2023 S�per Ma�aza. T�m haklar� sakl�d�r.</p>
+            <p>&copy; 2023 The Ultimate Shop. All rights reserved.</p>
             <div class="social-links">
                 <a href="#">Facebook</a>
                 <a href="#">Instagram</a>
