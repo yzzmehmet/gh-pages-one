@@ -1,0 +1,6 @@
+# Visual Studio klasörleri ve dosyalarý
+.vs/
+*.vspscc
+*.vssscc
+*.suo
+*.user
